@@ -76,16 +76,16 @@ def image():
         #이미지 사이즈 조정
         img_resize = image.resize((int(image.width / 2), int(image.height / 2)))
         #EasyOCR에서 이미지를 불러오기 위해 저장
-        img_resize.save('C:/Users/User/Img/test.png')
+        img_resize.save('C:/Users/HANSUNG/Image/test.png')
 
         # 번역할 언어
         lan = request.form['lang']
-        print(lan)
+        #print(lan)
          #EasyOCR
         #한글과 영어를 인식
-        reader = easyocr.Reader(['ko', 'en'], gpu = False)
+        reader = easyocr.Reader(['ko'], gpu = False)
         #번역할 사진
-        result = reader.readtext('C:/Users/User/Img/test.png')
+        result = reader.readtext('C:/Users/HANSUNG/Image/test.png')
         np.random.seed(42)
         COLORS = np.random.randint(0, 255, size=(256, 3),dtype="uint8") 
             
@@ -136,4 +136,4 @@ def imageSite():
     return jsonify(dic) # json 형식으로 전달
 
 if __name__ == "__main__":
-    run_simple('223.194.135.166', 80, app)
+    run_simple('192.168.202.13', 80, app)
