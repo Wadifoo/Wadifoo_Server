@@ -76,18 +76,20 @@ def image():
         #이미지 사이즈 조정
         img_resize = image.resize((int(image.width / 2), int(image.height / 2)))
         #EasyOCR에서 이미지를 불러오기 위해 저장
+        print("저장 시작")
         img_resize.save('C:/Users/HANSUNG/Image/test.png')
-
+        print("저장 완료")
         # 번역할 언어
         lan = request.form['lang']
         #print(lan)
          #EasyOCR
         #한글과 영어를 인식
+        print("인식 시작")
         reader = easyocr.Reader(['ko'], gpu = True)
         #번역할 사진
         result = reader.readtext('C:/Users/HANSUNG/Image/test.png')
-        np.random.seed(42)
-        COLORS = np.random.randint(0, 255, size=(256, 3),dtype="uint8") 
+        #np.random.seed(42)
+        # COLORS = np.random.randint(0, 255, size=(256, 3),dtype="uint8") 
             
         dic = dict()
         korean = []
