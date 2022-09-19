@@ -83,7 +83,7 @@ def image():
         #print(lan)
          #EasyOCR
         #한글과 영어를 인식
-        reader = easyocr.Reader(['ko'], gpu = False)
+        reader = easyocr.Reader(['ko'], gpu = True)
         #번역할 사진
         result = reader.readtext('C:/Users/HANSUNG/Image/test.png')
         np.random.seed(42)
@@ -130,10 +130,10 @@ def image():
       
     return 'true'
 
-# 결과 전달
+# 결과
 @app.route("/deliverImage", methods=['GET'])
 def imageSite():
     return jsonify(dic) # json 형식으로 전달
 
 if __name__ == "__main__":
-    run_simple('192.168.202.13', 80, app)
+    run_simple('223.194.128.158', 80, app)
