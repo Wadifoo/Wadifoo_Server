@@ -136,4 +136,4 @@ def imageSite():
     return jsonify(dic) # json 형식으로 전달
 
 if __name__ == "__main__":
-    run_simple('223.194.128.158', 80, app)
+    run_simple('172.30.1.41', 80, app)
