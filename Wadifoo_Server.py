@@ -115,8 +115,12 @@ def image():
             translate.append(trans)
             top.append(str(x)+","+str(y))
             bottom.append(str(x+w)+","+str(y+h))
-            textX.append(str(int((x + x + w) / 2)))
+            textX.append(str(int(x)+20))
             textY.append(str(y-40))
+            print(top)
+            print(bottom)
+            print(textX)
+            print(textY)
             
         size=len(korean)
 
@@ -138,4 +142,4 @@ def imageSite():
     return jsonify(dic) # json 형식으로 전달
 
 if __name__ == "__main__":
-    run_simple('172.30.1.41', 80, app)
+    run_simple('223.194.131.88', 80, app)
