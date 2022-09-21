@@ -117,10 +117,6 @@ def image():
             bottom.append(str(x+w)+","+str(y+h))
             textX.append(str(int(x)+20))
             textY.append(str(y-40))
-            print(top)
-            print(bottom)
-            print(textX)
-            print(textY)
             
         size=len(korean)
 
