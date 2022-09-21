@@ -104,11 +104,12 @@ def image():
             w = i[0][1][0] - i[0][0][0] 
             h = i[0][2][1] - i[0][1][1]
             
-            color = [0,0,255] # 파란색
+            #color = [0,0,255] # 파란색
             # 번역 결과
             #print("번역 결과 :" + i[1])
             print(i[1])
             trans = get_translate(i[1], lan)
+            print(trans)
             
             #결과값 리스트에 저장
             korean.append(i[1])
@@ -116,7 +117,7 @@ def image():
             top.append(str(x)+","+str(y))
             bottom.append(str(x+w)+","+str(y+h))
             textX.append(str(int(x)+20))
-            textY.append(str(y-40))
+            textY.append(str(y-30))
             
         size=len(korean)
 
