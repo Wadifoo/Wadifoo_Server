@@ -107,9 +107,9 @@ def image():
             #color = [0,0,255] # 파란색
             # 번역 결과
             #print("번역 결과 :" + i[1])
-            print(i[1])
+            #print(i[1])
             trans = get_translate(i[1], lan)
-            print(trans)
+            #print(trans)
             
             #결과값 리스트에 저장
             korean.append(i[1])
@@ -117,7 +117,7 @@ def image():
             top.append(str(x)+","+str(y))
             bottom.append(str(x+w)+","+str(y+h))
             textX.append(str(int(x)+20))
-            textY.append(str(y-30))
+            textY.append(str(int(y)-60))
             
         size=len(korean)
 
@@ -139,4 +139,6 @@ def imageSite():
     return jsonify(dic) # json 형식으로 전달
 
 if __name__ == "__main__":
-    run_simple('223.194.129.248', 80, app)
+    run_simple('113.198.79.86', 80, app)
+# 223.194.129.248  hansung
+# 113.198.79.86
